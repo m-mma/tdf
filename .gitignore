@@ -1,0 +1,27 @@
+# Add any directories, files, or patterns you don't want to be tracked by version control
+.sass-cache
+node_modules
+#Sass Cache
+__MACOSX
+.DS_Store
+*/.DS_Store
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+Icon?
+ehthumbs.db
+Thumbs.db
+.htaccess
+_UC-index.html
+_private/
+_vti_bin/
+_vti_cnf/
+_vti_log/
+_vti_pvt/
+_vti_txt/
+error_log
+goo/
+googlee1cf40ea966b207a.html
+htaccess.txt
