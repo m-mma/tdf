@@ -39,6 +39,7 @@ body {
   }
 }
 .wrapper {
+  max-width: $grid-max-width;
   width: 100%;
   margin: 0 auto;
 }

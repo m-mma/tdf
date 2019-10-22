@@ -1,0 +1,10 @@
+footer {
+  background-color: $white;
+  .footer__copyright {
+    display: block;
+    text-align: center;
+    p {
+      font-size: $paragraph-size / 1.25;
+    }
+  }
+}
