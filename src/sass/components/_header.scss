@@ -1,11 +1,38 @@
-.logo {
-  margin: 0 auto;
-  text-align: center;
-  a {
+header {
+  background-color: $white;
+  width: 100%;
+  z-index: 5;
+  position: relative;
 
+
+  .logo {
+    img {
+      max-width: 210px;
+      margin-top: $paragraph-margin / 2;
+    }
   }
-}
-.header__nav {
-  background-color: $grey;
-  text-align: center;
+
+  .header__nav {
+    float: right;
+    display: inline-block;
+    padding-top: $paragraph-margin * 1.75;
+    a {
+      margin-right: $paragraph-size / 1.25;
+      &:last-of-type {
+        margin-right: 0;
+      }
+    }
+  }
+  @media #{$laptop} {
+    .wrapper {
+      width: 95%;
+    }
+  }
+  @media #{$desktop} {
+    .wrapper {
+      width: 87%;
+    }
+  }
+
+
 }

@@ -8,6 +8,9 @@ $mobile-breakpoint:   "only screen and (min-width: 500px)";
 $mid-mobile:          "(max-width: 375px)";
 $lrg-mobile:          "(max-width: 500px)";
 $tablet:              "(max-width: 870px)";
+$laptop:              "(max-width: 1024px)";
+$desktop:             "(min-width: 1400px)";
+
 
 *,
 *:after,
@@ -34,13 +37,13 @@ body {
 }
 body {
   main {
-    padding-top: 9px;
+    // padding-top: 9px;
     // overflow-x: hidden;
   }
 }
 .wrapper {
   max-width: $grid-max-width;
-  width: 100%;
+  // width: 100%;
   margin: 0 auto;
 }
 .mid-content {
