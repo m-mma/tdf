@@ -1,9 +1,18 @@
 header {
   background-color: $white;
-  width: 100%;
   z-index: 5;
   position: relative;
+  margin: 0;
+  padding: 0;
+  display: block;
+  font-size: 14px;
+  line-height: 1.3;
 
+  .wrapper {
+    width: 90%;
+    padding: 0 1em;
+    margin: 0 auto;
+  }
 
   .logo {
     img {
@@ -23,16 +32,51 @@ header {
       }
     }
   }
-  @media #{$laptop} {
-    .wrapper {
-      width: 95%;
-    }
+
+@media #{$laptop} {
+  .wrapper {
+    width: 92%;
+    padding: 0;
   }
-  @media #{$desktop} {
+}
+
+  @media #{$lrg-mobile} {
     .wrapper {
-      width: 87%;
+      text-align: center;
+    }
+    .logo {
+      img {
+        max-width: 130px;
+      }
+    }
+    .header__nav {
+      display: block;
+      float: none;
+      padding-top: 0;
+      padding-bottom: $paragraph-margin / 2;
+      a {
+        text-align: center;
+        font-size: $paragraph-size / 1.063;
+      }
     }
   }
 
-
+  @media #{$mid-mobile} {
+    .wrapper {
+      padding: 0;
+    }
+    .header__nav {
+      a {
+        text-align: center;
+        font-size: $paragraph-size / 1.250;
+      }
+    }
+  }
+  @media #{$mobile} {
+    .header__nav {
+      a {
+        margin-right: $paragraph-size / 2;
+      }
+    }
+  }
 }
