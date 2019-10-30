@@ -1,4 +1,8 @@
 .maintenance {
+  background: $white;
+  background-color: $white;
+}
+.maintenance-mode {
   color: $white;
   background: $purple;
   background-color: $purple;
@@ -9,7 +13,18 @@
     img {
       margin: $header-margin auto;
     }
+    .contacts {
+      margin: 0 35%;
+      .icon {
+        display: inline;
+        position: relative;
+        max-width: 21px;
+        margin: 0 6px 0 0;
+        top: 4px;
+      }
+    }
   }
+
   .text-large {
     text-align: center;
     text-transform: uppercase;
@@ -26,7 +41,26 @@
     font-style: italic;
     font-size: $header-size;
   }
+  @media #{$laptop} {
+    .content {
+      .contacts {
+        margin: 0 30%;
+      }
+    }
+  }
+  @media #{$tablet} {
+    .content {
+      .contacts {
+        margin: 0 24%;
+      }
+    }
+  }
   @media #{$lrg-mobile} {
+    .content {
+      .contacts {
+        margin: 0 auto;
+      }
+    }
     .text-large {
       letter-spacing: 0.063em;
       font-size: $header-size / 1.250;
@@ -40,6 +74,16 @@
       font-size: $header-size / 1.375;
       span {
         font-size: $header-size * 1.375;
+      }
+    }
+  }
+  @media #{$mobile} {
+    .phone-numbers {
+      a {
+        &:last-of-type {
+          display: block;
+          margin-left: 30px;
+        }
       }
     }
   }
