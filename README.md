@@ -14,5 +14,5 @@ Running `gulp` watches for changes to the .html, .scss, .js and image files in t
 *  `js-scripts` concatenates all the .js files in the js folder and minifies them into the dist/js folder.
 *  `html-minify` listens to .html changes in the src folder and minifies the file into the dist folder.
 *  `image-minify` watches for changes to PNG, JPEG, GIF and SVG images and compresses them into the dist/images folder.
-*  `inlinesource` adds inline code to <script>, <link> and <img> tags that contain the inline attribute .
+*  `inlinesource` adds inline code to script, link and image tags that contain the 'inline' attribute .
 *  `generate-sw` generates a service worker and precaches static resources such as logos, images and embedded fonts.
