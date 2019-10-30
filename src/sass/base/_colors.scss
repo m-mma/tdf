@@ -23,23 +23,27 @@ $alert-green:     #009933;
 $alert-blue:      #0000ff;
 $alert-yellow:    #ffcc00;
 
-$mpesa-green:     #009933;
-
 
 
 // Colour Guide
 .colour-guide {
   padding-top: 0;
   padding-bottom: 0;
+  
   p {
     color: $white;
     margin-bottom: 0;
     text-align: center;
     font-weight: bold;
   }
-
+  .purple {
+    background-color: $purple;
+  }
+  .red {
+    background-color: $red;
+  }
   .orange {
-    background: $orange;
+    background-color: $orange;
   }
 
   .dark-grey {
