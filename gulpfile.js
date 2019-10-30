@@ -9,9 +9,9 @@ var autoprefixer = require('gulp-autoprefixer');
 var terser = require('gulp-terser');
 var concat = require('gulp-concat');
 var htmlmin = require('gulp-htmlmin');
+var inlinesource = require('gulp-inline-source');
 var imagemin = require('gulp-imagemin');
 var swPrecache = require('sw-precache');
-var inlinesource = require('gulp-inline-source');
 
 
 //Watch for 'Ctrl + C' on Windows and end gulp process
@@ -60,6 +60,17 @@ gulp.task('js-scripts', done => {
 // End JS tasks
 
 
+//Start inline CSS and JS
+gulp.task('inlinesource', done => {
+
+  return gulp.src('src/**/*.html')
+    .pipe(inlinesource())
+    .pipe(gulp.dest('./'));
+  done();
+});
+//End inline CSS and JS
+
+
 // Start HTML minify task
 gulp.task('html-minify', done => {
   return gulp.src(['src/**/*.html'])
@@ -67,8 +78,8 @@ gulp.task('html-minify', done => {
       collapseWhitespace: true,
       removeComments: true,
       // removeEmptyElements: true,
-      minifyCSS: true,
-      minifyJS: true
+      minifyCSS: false,
+      minifyJS: false
     }))
     .pipe(gulp.dest('./'));
   done();
@@ -104,7 +115,7 @@ gulp.task('generate-sw', function(callback) {
     // staticFileGlobs: [rootDir + '/*.{js,html,css,png,jpg,gif,svg,eot,ttf,woff}'],
     staticFileGlobs: [
       // './**.html',
-      // 'css/main.css',
+      // 'css/main-styles.css',
       'fonts/**.*',
       'images/static/**.*'
     ],
@@ -120,8 +131,9 @@ gulp.task('generate-sw', function(callback) {
 gulp.task('default', done => {
   gulp.watch('src/js/*.js', gulp.series('js-scripts'));
   gulp.watch('src/sass/**/*.scss', gulp.series('css-tasks'));
-  gulp.watch('src/*.html', gulp.series('html-minify'));
   gulp.watch('src/images/**/*.*', gulp.series('image-minify'));
+  gulp.watch('src/*.html', gulp.series('inlinesource'));
+  // gulp.watch('src/*.html', gulp.series('html-minify'));
   // gulp.watch( 'dist', gulp.series('generate-sw'));
   done();
 });
