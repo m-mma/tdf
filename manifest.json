@@ -1,0 +1,21 @@
+{
+  "short_name": "Data Factory",
+  "name": "The Data Factory",
+  "icons": [
+    {
+        "src": "images/static/site-icons/android-chrome-192x192.png",
+        "sizes": "192x192",
+        "type": "image/png"
+    },
+    {
+        "src": "images/static/site-icons/android-chrome-512x512.png",
+        "sizes": "512x512",
+        "type": "image/png"
+    }
+  ],
+  "start_url": "index.html",
+  "background_color": "#FFFFFF",
+  "display": "minimal-ui",
+  "scope": "/",
+  "theme_color": "#FFFFFF"
+}

@@ -105,9 +105,8 @@ gulp.task('generate-sw', function(callback) {
     staticFileGlobs: [
       // './**.html',
       // 'css/main.css',
-      'css/fonts/**.*'
-      // 'images/site-icons/**.*',
-      // 'images/static_images/**.*'
+      'fonts/**.*',
+      'images/static/**.*'
     ],
     // stripPrefix: rootDir
 
