@@ -1,2 +1,2 @@
 User-agent: *
-Disallow: /style_guide.html
+Disallow: /style-guide.html
