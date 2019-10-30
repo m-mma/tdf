@@ -1,0 +1,46 @@
+.maintenance {
+  color: $white;
+  background: $purple;
+  background-color: $purple;
+  h1, h2, h3, h4, h5, h6, p, ol li, ul li, span, blockquote {
+    color: $white;
+  }
+  .content {
+    img {
+      margin: $header-margin auto;
+    }
+  }
+  .text-large {
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 0.125em;
+    font-weight: $bold;
+    span {
+      display: block;
+      font-size: $header-size * 3;
+      font-weight: $heavy;
+    }
+  }
+  .text-mid {
+    text-align: center;
+    font-style: italic;
+    font-size: $header-size;
+  }
+  @media #{$lrg-mobile} {
+    .text-large {
+      letter-spacing: 0.063em;
+      font-size: $header-size / 1.250;
+      span {
+        font-size: $header-size * 1.625;
+      }
+    }
+  }
+  @media #{$mid-mobile} {
+    .text-large {
+      font-size: $header-size / 1.375;
+      span {
+        font-size: $header-size * 1.375;
+      }
+    }
+  }
+}
