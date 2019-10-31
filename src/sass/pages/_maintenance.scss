@@ -15,6 +15,7 @@
     }
     a {
       color: $orange;
+      text-decoration: none;
       &:hover {
         color: lighten($orange, 10%);
       }
@@ -24,6 +25,7 @@
     }
     .contacts {
       margin: 0 35%;
+      background: none;
       svg, .icon {
         display: inline;
         position: relative;

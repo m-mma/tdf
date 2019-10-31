@@ -5,6 +5,10 @@
   font-size: $paragraph-size * 1.250;
   max-width: 800px;
   margin: 0 auto;
+  p {
+    padding-right: 1em;
+    padding-left: 1em;
+  }
 }
 #curve-bottom-intro, #curve-bottom-services, #curve-bottom-projects {
   width: 100%;
@@ -92,15 +96,59 @@
   }
 }
 .projects {
-  h1, h2, h3 {
+  h1, h2, h3, h4 {
     text-align: center;
   }
-  h3 {
+  h3, h4 {
     letter-spacing: 0;
     color: $purple;
   }
   #curve-bottom-projects {
     fill: $red;
+  }
+}
+.contacts {
+  background: $red;
+  background-color: $red;
+
+  h1, h2 {
+    color: $white;
+  }
+  p {
+    color: $white;
+  }
+  a {
+    color: $white;
+    text-decoration: underline;
+    &:hover {
+      color: $white;
+      text-decoration: none;
+    }
+    &:active {
+      color: $grey;
+    }
+  }
+  svg, .icon {
+    display: inline;
+    position: relative;
+    max-width: 21px;
+    margin: 0 6px 0 0;
+    top: 5px;
+  }
+  .content {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
+  @media #{$mobile} {
+    .phone-numbers {
+      a {
+        &:last-of-type {
+          display: block;
+          margin-left: 30px;
+        }
+      }
+    }
   }
 }
 
@@ -115,5 +163,7 @@
   }
   .content {
     padding-top: 0;
+    padding-right: 0;
+    padding-left: 0;
   }
 }
