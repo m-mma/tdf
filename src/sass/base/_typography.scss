@@ -81,18 +81,18 @@ $base-font-size: 14px;
 $regularSize: 12;
 
 // Paragraphs
-$paragraph-color      : $dark-grey;
+$paragraph-color      : $purple;
 $paragraph-size       : rem(16px);
 $paragraph-line-height: 1.45em;
 $paragraph-margin     : 16px;
 
 // Headings
-$header-color      : $dark-grey;
+$header-color      : $orange;
 $header-size       : rem(26px);
 $header-line-height: 1.25;
 $header-margin     : $paragraph-margin * 1.25;
 
-$link-color        :  $orange;
+$link-color        : $red;
 
 $hr-margin: 27px;
 
@@ -131,7 +131,7 @@ h1, h2, h3, h4, h5, h6 {
     color: $header-color;
     line-height:  $header-line-height;
     font-weight: $heavy;
-
+    letter-spacing: rem(1px); 
     &:first-child {
         // margin-top: 0;
     }
@@ -209,13 +209,13 @@ a {
     text-decoration: none;
     transition: all 0.2s ease;
     &:hover {
-        // color: $light-blue;
+        color: $orange;
         text-decoration: none;
         transition: background-color .3s ease-out;
     }
 
     &:active {
-        color: $grey;
+        color: darken($orange, 10%);
         text-decoration: none;
         cursor: pointer;
     }
