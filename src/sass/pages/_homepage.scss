@@ -1,10 +1,17 @@
 .image-wrap {
   padding: 0 1em 0 0;
 }
-.content {
-  padding: inherit;
+#curve-bottom-intro, #curve-bottom-services, #curve-bottom-projects {
+  width: 100%;
+  position: relative;
+  bottom: -5px;
+  fill: $purple
 }
+
 .introduction {
+  background-color: $white-smoke;
+  background: $white-smoke;
+
   p {
     font-weight: $bold;
     &:first-of-type {
@@ -23,6 +30,9 @@
     letter-spacing: 0;
     color: $purple;
     font-size: $header-size * 1.188;
+  }
+  #curve-bottom-intro {
+    fill: $purple
   }
   @media #{$lrg-mobile} {
     .headline {
@@ -55,6 +65,26 @@
     .sub-headline {
       font-size: $header-size / 1.5;
     }
+  }
+}
+.services {
+  background: $purple;
+  background-color: $purple;
+  text-align: center;
+  h1, h2 {
+    text-align: center;
+  }
+  h4 {
+    color: $white;
+    letter-spacing: 0;
+  }
+  p {
+    color: $white;
+  }
+  .content--center{
+    font-size: $paragraph-size * 1.250;
+    max-width: 800px;
+    margin: 0 auto;
   }
 }
 
