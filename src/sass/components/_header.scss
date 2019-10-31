@@ -23,6 +23,8 @@ header {
     img, svg {
       max-width: 210px;
       margin-top: $paragraph-margin / 2;
+      -webkit-transition: max-width 0.2s ease-in-out;
+      transition: max-width 0.2s ease-in-out;
     }
   }
 
@@ -52,7 +54,7 @@ header {
       text-align: center;
     }
     .logo {
-      img {
+      img, svg  {
         max-width: 130px;
       }
     }
@@ -85,6 +87,32 @@ header {
         letter-spacing: 0;
         margin-right: $paragraph-size / 2;
       }
+    }
+  }
+}
+.sticky-header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding-top: 0;
+  @include box-shadow(1px, 1px, 3px, 1px, rgba(50, 50, 50, 0.65));
+  .logo {
+    img, svg {
+      max-width: 120px;
+      -webkit-transition: max-width 0.2s ease-in-out;
+      transition: max-width 0.2s ease-in-out;
+    }
+  }
+  .header__nav {
+    padding-top: $paragraph-margin;
+  }
+  @media #{$lrg-mobile} {
+    padding-top: 0.563em;
+    .logo {
+      display: none;
+    }
+    .header__nav {
+      padding-top: 0;
     }
   }
 }

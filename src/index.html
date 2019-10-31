@@ -47,7 +47,7 @@
 
 <body>
   <!-- HEADER & NAVIGATION START -->
-  <header>
+  <header id="header">
     <div class="wrapper">
 
         <a href="#" class="logo" name="Home">
@@ -99,10 +99,10 @@
         </a>
 
         <nav class="header__nav">
-          <a href="#">About Us</a>
-          <a href="#">What We Do</a>
-          <a href="#">Projects</a>
-          <a href="#">Contact Us</a>
+          <a data-scroll href="#about-us">About Us</a>
+          <a data-scroll href="#what-we-do">What We Do</a>
+          <a data-scroll href="#projects">Projects</a>
+          <a data-scroll href="#contacts-us">Contact Us</a>
         </nav>
 
     </div>
@@ -124,7 +124,7 @@
               <div class="col-6 image-wrap">
                 <img src="https://via.placeholder.com/1920x1080/808080/FFFFFF/?text=Introduction+Graphic" alt="Full Width Image">
               </div>
-              <div class="col-6 content">
+              <div class="col-6 content" id="about-us">
                 <h2>About Us</h2>
                 <p>We believe that every business has data which when collected, stored, cleaned, organized, consolidated, analyzed and interpreted by a trained mind yields valuable insights into the business which helps in making strategic business planning decisions & operations efficiency improvements.</p>
                 <p>Our commitment is to providing services that precisely cater to our clients through harnessing the expertise of our in-house analysts. We collect market data, organize it and make it quickly accessible with an aim of providing authoritative value for our clients’ businesses in line with their market needs. </p>
@@ -143,7 +143,7 @@
       <!-- END INTRODUCTION SECTION -->
 
       <!-- SERVICES SECTION START -->
-      <section class="services">
+      <section class="services" id="what-we-do">
 
         <div class="wrapper">
           <div class="row">
@@ -181,12 +181,12 @@
       <!-- END SERVICES SECTION -->
 
       <!-- PROJECTS SECTION START -->
-      <section class="projects">
+      <section class="projects" id="projects">
 
         <div class="wrapper">
           <div class="row">
             <div class="col-12">
-              <h2>Projects</h2>
+              <h2 >Projects</h2>
               <div class="image-wrap">
                 <img src="https://via.placeholder.com/1920x1080/808080/FFFFFF/?text=Projects+Carousel" alt="Full Width Image">
               </div>
@@ -209,12 +209,12 @@
       </section>
       <!-- END PROJECTS SECTION -->
 
-      <section class="contacts">
+      <section class="contacts" id="contacts-us">
         <div class="wrapper">
           <div class="row">
             <div class="col-12">
               <div class="col-6 content">
-                <h2>Contact Us</h2>
+                <h2 >Contact Us</h2>
 
 
                 <div class="contacts">
@@ -311,8 +311,25 @@
   </footer>
   <!-- END FOOTER -->
 
+  <script src="js/all-js-min.js"></script>
+
+  <!-- SMOOTH SCROLL START -->
+  <script type="text/javascript">
+  var scroll = new SmoothScroll('a[href*="#"]:not([data-easing])');
+     if (document.querySelector('[data-easing]')) {
+       var easeOutQuad = new SmoothScroll('[data-easing="easeOutQuad"]', {easing: 'easeOutQuad'});
+     }
+  </script>
+  <!-- END SMOOTH SCROLL -->
+
+  <!-- STICKY NAV START -->
+  <script type="text/javascript">
+    window.onscroll = function() {stickyNav()};
+  </script>
+  <!-- END STICKY NAV -->
+
   <!-- Service Worker start -->
-  <script>
+  <script type="text/javascript">
     if ('serviceWorker' in navigator) {
       console.log("Register service worker");
       navigator.serviceWorker.register('service-worker.js').then(function(reg) {

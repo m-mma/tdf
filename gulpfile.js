@@ -47,11 +47,7 @@ gulp.task('css-tasks', done => {
 
 // Start JS tasks
 gulp.task('js-scripts', done => {
-  gulp.src([
-      // 'src/js/jquery-3.3.1.min.js',
-      'src/js/test-a.js',
-      'src/js/test-b.js'
-    ])
+  gulp.src('src/js/*.js')
     .pipe(concat('all-js-min.js'))
     .pipe(terser())
     .pipe(gulp.dest('js/'))
