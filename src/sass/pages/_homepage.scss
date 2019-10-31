@@ -1,6 +1,11 @@
 .image-wrap {
   padding: 0 1em 0 0;
 }
+.content--center{
+  font-size: $paragraph-size * 1.250;
+  max-width: 800px;
+  margin: 0 auto;
+}
 #curve-bottom-intro, #curve-bottom-services, #curve-bottom-projects {
   width: 100%;
   position: relative;
@@ -81,10 +86,21 @@
   p {
     color: $white;
   }
-  .content--center{
-    font-size: $paragraph-size * 1.250;
-    max-width: 800px;
-    margin: 0 auto;
+
+  #curve-bottom-services {
+    fill: $white-smoke;
+  }
+}
+.projects {
+  h1, h2, h3 {
+    text-align: center;
+  }
+  h3 {
+    letter-spacing: 0;
+    color: $purple;
+  }
+  #curve-bottom-projects {
+    fill: $red;
   }
 }
 
