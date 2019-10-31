@@ -9,7 +9,7 @@
   h1, h2, h3, h4, h5, h6, p, ol li, ul li, span, blockquote {
     color: $white;
   }
-  .content {
+  .content--maintenance {
     img {
       margin: $header-margin auto;
     }
@@ -23,7 +23,7 @@
         color: darken($orange, 10%);
       }
     }
-    .contacts {
+    .contacts--maintenance {
       margin: 0 35%;
       background: none;
       svg, .icon {
@@ -53,22 +53,22 @@
     font-size: $header-size;
   }
   @media #{$laptop} {
-    .content {
-      .contacts {
+    .content--maintenance {
+      .contacts--maintenance {
         margin: 0 30%;
       }
     }
   }
   @media #{$tablet} {
-    .content {
-      .contacts {
+    .content--maintenance {
+      .contacts--maintenance {
         margin: 0 24%;
       }
     }
   }
   @media #{$lrg-mobile} {
-    .content {
-      .contacts {
+    .content--maintenance {
+      .contacts--maintenance {
         margin: 0 auto;
       }
     }

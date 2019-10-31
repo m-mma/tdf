@@ -137,10 +137,15 @@
   }
   .content {
     padding-top: 0;
+    padding-right: 2em;
     padding-bottom: 0;
+    padding-left: 0;
   }
 
   @media #{$mobile} {
+    .content {
+      padding-right: 0;
+    }
     .phone-numbers {
       a {
         &:last-of-type {
@@ -165,5 +170,20 @@
     padding-top: 0;
     padding-right: 0;
     padding-left: 0;
+    .contacts {
+      .phone-numbers {
+        a {
+          &:last-of-type {
+            display: block;
+            margin-left: 30px;
+          }
+        }
+      }
+    }
+  }
+}
+@media #{$mobile} {
+  .contacts {
+
   }
 }
