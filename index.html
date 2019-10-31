@@ -98,11 +98,11 @@
           </svg>
         </a>
 
-        <nav class="header__nav">
-          <a data-scroll href="#about-us">About Us</a>
-          <a data-scroll href="#what-we-do">What We Do</a>
-          <a data-scroll href="#projects">Projects</a>
-          <a data-scroll href="#contacts-us">Contact Us</a>
+        <nav id="main-nav" class="header__nav">
+          <a data-scroll href="#about-us" class="nav-links">About Us</a>
+          <a data-scroll href="#what-we-do" class="nav-links">What We Do</a>
+          <a data-scroll href="#projects" class="nav-links">Projects</a>
+          <a data-scroll href="#contacts-us" class="nav-links">Contact Us</a>
         </nav>
 
     </div>
@@ -125,7 +125,7 @@
                 <img src="https://via.placeholder.com/1920x1080/808080/FFFFFF/?text=Introduction+Graphic" alt="Full Width Image">
               </div>
               <div class="col-6 content" id="about-us">
-                <h2>About Us</h2>
+                <h2 class="section-title">About Us</h2>
                 <p>We believe that every business has data which when collected, stored, cleaned, organized, consolidated, analyzed and interpreted by a trained mind yields valuable insights into the business which helps in making strategic business planning decisions & operations efficiency improvements.</p>
                 <p>Our commitment is to providing services that precisely cater to our clients through harnessing the expertise of our in-house analysts. We collect market data, organize it and make it quickly accessible with an aim of providing authoritative value for our clients’ businesses in line with their market needs. </p>
               </div>
@@ -134,7 +134,7 @@
           </div>
         </div>
 
-        <svg version="1.1" id="curve-bottom-intro" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+        <svg version="1.1" id="curve-bottom-intro"  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
         	 viewBox="0 0 1920 45" style="enable-background:new 0 0 1920 45;" xml:space="preserve">
         <path d="M1920,45V0.5c-197.9,12.2-559.6,42.5-961.7,42.5C552,43.1,196.2,15.4,0,3.2V45H1920z"/>
         </svg>
@@ -148,7 +148,7 @@
         <div class="wrapper">
           <div class="row">
             <div class="col-12">
-              <h2>What We Do</h2>
+              <h2 class="section-title">What We Do</h2>
               <p class="content--center">We support the entire data management cycle in our clients’ business from collection to dissemination. By integrating data patterns with the latest technology, we are able to understand our client’s customer needs and provide them with  recommendations for short and long term business improvements.</p>
 
               <div class="col-4">
@@ -186,7 +186,7 @@
         <div class="wrapper">
           <div class="row">
             <div class="col-12">
-              <h2 >Projects</h2>
+              <h2 class="section-title">Projects</h2>
               <div class="image-wrap">
                 <img src="https://via.placeholder.com/1920x1080/808080/FFFFFF/?text=Projects+Carousel" alt="Full Width Image">
               </div>
@@ -214,7 +214,7 @@
           <div class="row">
             <div class="col-12">
               <div class="col-6 content">
-                <h2 >Contact Us</h2>
+                <h2 class="section-title">Contact Us</h2>
 
 
                 <div class="contacts">
@@ -311,11 +311,12 @@
   </footer>
   <!-- END FOOTER -->
 
-  <script src="js/all-js-min.js"></script>
+  <script type="text/javascript" src="js/all-js-min.js"></script>
+
 
   <!-- SMOOTH SCROLL START -->
   <script type="text/javascript">
-  var scroll = new SmoothScroll('a[href*="#"]:not([data-easing])');
+    var scroll = new SmoothScroll('a[href*="#"]:not([data-easing])');
      if (document.querySelector('[data-easing]')) {
        var easeOutQuad = new SmoothScroll('[data-easing="easeOutQuad"]', {easing: 'easeOutQuad'});
      }

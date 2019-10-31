@@ -13,6 +13,7 @@ header {
     margin-bottom: 0;
   }
 
+
   .wrapper {
     width: 90%;
     padding: 0 1em;
@@ -20,6 +21,7 @@ header {
   }
 
   .logo {
+    margin-left: $paragraph-margin / 6;
     img, svg {
       max-width: 210px;
       margin-top: $paragraph-margin / 2;
@@ -36,18 +38,23 @@ header {
       font-weight: $heavy;
       letter-spacing: 1px;
       margin-right: $paragraph-size / 1.25;
+
       &:last-of-type {
-        margin-right: 0;
+        margin-right: $paragraph-size ;
       }
     }
   }
-
-@media #{$laptop} {
-  .wrapper {
-    width: 92%;
-    padding: 0;
+  .active  {
+    // color: $orange;
+    color: darken($orange, 5%);
   }
-}
+
+  @media #{$laptop} {
+    .wrapper {
+      width: 92%;
+      padding: 0;
+    }
+  }
 
   @media #{$lrg-mobile} {
     .wrapper {
@@ -66,6 +73,9 @@ header {
       a {
         text-align: center;
         font-size: $paragraph-size / 1.063;
+        &:last-of-type {
+          margin-right: 0;
+        }
       }
     }
   }
@@ -90,6 +100,7 @@ header {
     }
   }
 }
+
 .sticky-header {
   position: fixed;
   top: 0;

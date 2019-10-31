@@ -20,7 +20,9 @@
 .introduction {
   background-color: $white-smoke;
   background: $white-smoke;
-
+  width: 100%;
+  padding-right: 0;
+  padding-left: 0;
   p {
     font-weight: $bold;
     &:first-of-type {
@@ -80,6 +82,7 @@
   background: $purple;
   background-color: $purple;
   text-align: center;
+  width: 100%;
   h1, h2 {
     text-align: center;
   }
@@ -96,6 +99,7 @@
   }
 }
 .projects {
+  width: 100%;
   h1, h2, h3, h4 {
     text-align: center;
   }
@@ -108,6 +112,7 @@
   }
 }
 .contacts {
+  width: 100%;
   background: $red;
   background-color: $red;
 

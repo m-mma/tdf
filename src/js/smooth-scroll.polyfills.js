@@ -113,7 +113,7 @@ if (window.Element && !Element.prototype.closest) {
     durationMax: null,
     durationMin: null,
     clip: true,
-    offset: 18,
+    offset: 25,
 
     // Easing
     easing: 'easeInOutCubic',
