@@ -47,6 +47,9 @@ header {
   .active  {
     // color: $orange;
     color: darken($orange, 5%);
+    &:first-of-type {
+      // color: $link-color; //hides active state
+    }
   }
 
   @media #{$laptop} {
