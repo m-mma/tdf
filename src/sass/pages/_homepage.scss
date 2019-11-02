@@ -1,5 +1,6 @@
 .image-wrap {
   padding: 0 1em 0 0;
+
 }
 .content--center{
   font-size: $paragraph-size * 1.250;
@@ -96,6 +97,15 @@
 
   #curve-bottom-services {
     fill: $white-smoke;
+  }
+  .icon {
+      max-width: 210px;
+      .icon-white {
+        fill: $white;
+      }
+      .icon-orange {
+        fill: $light-orange;
+      }
   }
 }
 .projects {

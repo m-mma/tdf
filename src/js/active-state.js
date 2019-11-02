@@ -4,7 +4,6 @@
 const links = document.querySelectorAll('.nav-links');
 const sections = document.querySelectorAll('.section-title');
 
-
 function changeLinkState() {
   let index = sections.length;
 
