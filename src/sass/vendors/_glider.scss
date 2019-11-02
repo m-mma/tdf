@@ -56,7 +56,7 @@
   text-decoration: none;
   left: -32px;
   border: 0;
-  top: 40%;
+  top: 35%;
   margin: 0 10px;
   cursor: pointer;
   color: #666;
@@ -126,7 +126,19 @@
 .glider-dot.active {
   background: $purple;
 }
+@media #{$tablet} {
+  .glider-prev,.glider-next {
+    top: 32%;
+    svg {
+      fill: $grey;
+      width: 35px;
+    }
+  }
+}
 @media(max-width: 36em){
+  // .glider-prev,.glider-next {
+  //   top: 30%;
+  // }
   .glider::-webkit-scrollbar {
     opacity: 1;
     -webkit-appearance: none;
@@ -140,9 +152,24 @@
     box-shadow: 0 0 1px rgba(255,255,255,.25);
   }
 }
+
 @media #{$lrg-mobile} {
   .glider-prev,.glider-next {
-    top: 35%;
+    top: 21%;
+    svg {
+      fill: $grey;
+      width: 25px;
+    }
+  }
+}
+@media #{$mid-mobile} {
+  .glider-prev,.glider-next {
+    top: 20%;
+  }
+}
+@media #{$mobile} {
+  .glider-prev,.glider-next {
+    top: 15%;
   }
 }
 .glider-wrap {
