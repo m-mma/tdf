@@ -298,8 +298,50 @@
           <div class="row">
             <div class="col-12">
               <h2 id="projects" class="section-title">Projects</h2>
-              <div class="image-wrap">
-                <img src="https://via.placeholder.com/1920x1080/808080/FFFFFF/?text=Projects+Carousel" alt="Full Width Image">
+              <div class="glider-wrap">
+                <div class="glider-contain">
+                  <div class="glider ">
+                    <div>
+                      <img alt="Test" src="http://placehold.it/1920x1080?text=Slide+One" alt="Slide One">
+                    </div>
+                    <div>
+                      <img alt="Test" src="http://placehold.it/1920x1080?text=Slide+Two" alt="Slide Two">
+                    </div>
+                    <div>
+                      <img alt="Test" src="http://placehold.it/1920x1080?text=Slide+Three" alt="Slide Three">
+                    </div>
+                    <div>
+                      <img alt="Test" src="http://placehold.it/1920x1080?text=Slide+Four" alt="Slide Four">
+                    </div>
+                    <div>
+                      <img alt="Test" src="http://placehold.it/1920x1080?text=Slide+Five" alt="Slide Five">
+                    </div>
+                  </div>
+                  <button class="glider-prev">
+                    <svg version="1.1" id="left-arrow" class="glider-icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                    	 viewBox="0 0 50 50" xml:space="preserve">
+                    <path  d="M46.2,12.7C44,8.9,41.1,6,37.3,3.8C33.5,1.6,29.4,0.5,25,0.5c-4.4,0-8.5,1.1-12.3,3.3C8.9,6,6,8.9,3.8,12.7
+                    	C1.6,16.5,0.5,20.6,0.5,25c0,4.4,1.1,8.5,3.3,12.3c2.2,3.8,5.2,6.7,8.9,8.9c3.8,2.2,7.9,3.3,12.3,3.3c4.4,0,8.5-1.1,12.3-3.3
+                    	c3.8-2.2,6.7-5.2,8.9-8.9c2.2-3.8,3.3-7.9,3.3-12.3C49.5,20.6,48.4,16.5,46.2,12.7z M31.7,33.2c0.3,0.3,0.5,0.7,0.5,1.2
+                    	c0,0.5-0.2,0.9-0.5,1.2L29,38.4c-0.3,0.3-0.7,0.5-1.2,0.5c-0.5,0-0.9-0.2-1.2-0.5L14.4,26.2c-0.3-0.3-0.5-0.7-0.5-1.2
+                    	c0-0.5,0.2-0.9,0.5-1.2l12.1-12.1c0.3-0.3,0.7-0.5,1.2-0.5c0.5,0,0.9,0.2,1.2,0.5l2.7,2.7c0.3,0.3,0.5,0.7,0.5,1.2
+                    	c0,0.5-0.2,0.9-0.5,1.2L23.5,25L31.7,33.2z"/>
+                    </svg>
+                  </button>
+                  <button class="glider-next">
+                    <svg version="1.1" id="right-arrow" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+                    	 y="0px" viewBox="0 0 50 50" style="enable-background:new 0 0 50 50;" xml:space="preserve">
+
+                    <path d="M3.8,37.3c2.2,3.8,5.2,6.7,8.9,8.9c3.8,2.2,7.9,3.3,12.3,3.3c4.4,0,8.5-1.1,12.3-3.3c3.8-2.2,6.7-5.2,8.9-8.9
+                    	c2.2-3.8,3.3-7.9,3.3-12.3c0-4.4-1.1-8.5-3.3-12.3C44,8.9,41.1,6,37.3,3.8C33.5,1.6,29.4,0.5,25,0.5c-4.4,0-8.5,1.1-12.3,3.3
+                    	C8.9,6,6,8.9,3.8,12.7C1.6,16.5,0.5,20.6,0.5,25C0.5,29.4,1.6,33.5,3.8,37.3z M18.3,16.8c-0.3-0.3-0.5-0.7-0.5-1.2
+                    	c0-0.5,0.2-0.9,0.5-1.2l2.7-2.7c0.3-0.3,0.7-0.5,1.2-0.5c0.5,0,0.9,0.2,1.2,0.5l12.1,12.1c0.3,0.3,0.5,0.7,0.5,1.2s-0.2,0.9-0.5,1.2
+                    	L23.4,38.4c-0.3,0.3-0.7,0.5-1.2,0.5c-0.5,0-0.9-0.2-1.2-0.5l-2.7-2.7c-0.3-0.3-0.5-0.7-0.5-1.2c0-0.5,0.2-0.9,0.5-1.2l8.2-8.2
+                    	L18.3,16.8z"/>
+                    </svg>
+                  </button>
+                  <div id="dots"></div>
+                </div>
               </div>
               <div class="content--center">
                 <h4>Hela - Smart Wallet App</h4>
@@ -438,6 +480,107 @@
     window.onscroll = function() {stickyNav()};
   </script>
   <!-- END STICKY NAV -->
+
+  <!-- CONTENT SLIDER START -->
+  <script>
+
+      window.addEventListener('load',function(){
+        document.querySelector('.glider').addEventListener('glider-slide-visible', function(event){
+            var glider = Glider(this);
+            console.log('Slide Visible %s', event.detail.slide)
+        });
+        document.querySelector('.glider').addEventListener('glider-slide-hidden', function(event){
+            console.log('Slide Hidden %s', event.detail.slide)
+        });
+        document.querySelector('.glider').addEventListener('glider-refresh', function(event){
+            console.log('Refresh')
+        });
+        document.querySelector('.glider').addEventListener('glider-loaded', function(event){
+            console.log('Loaded')
+        });
+
+        window._ = new Glider(document.querySelector('.glider'), {
+            slidesToShow: 1, //'auto',
+            slidesToScroll: 1,
+            // itemWidth: 150,
+            draggable: true,
+            scrollLock: false,
+            dots: '#dots',
+            rewind: true,
+            arrows: {
+                prev: '.glider-prev',
+                next: '.glider-next'
+            },
+            responsive: [
+                {
+                  breakpoint: 1024,
+                  settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    itemWidth: 'auto',
+                    duration: 0.25
+                  }
+                },
+                {
+                    breakpoint: 800,
+                    settings: {
+                        // slidesToScroll: 'auto',
+                        // // itemWidth: 300,
+                        // slidesToShow: 'auto',
+                        slidesToShow: 1, //'auto',
+                        slidesToScroll: 1,
+                        exactWidth: true
+                    }
+                },
+                {
+                    breakpoint: 700,
+                    settings: {
+                        slidesToScroll: 1,
+                        slidesToShow: 1,
+                        // dots: false,
+                        // arrows: false,
+                    }
+                },
+                {
+                    breakpoint: 600,
+                    settings: {
+                        slidesToScroll: 1,
+                        slidesToShow: 1
+                    }
+                },
+                {
+                    breakpoint: 500,
+                    settings: {
+                        slidesToScroll: 1,
+                        slidesToShow: 1,
+                        dots: false,
+                        arrows: false,
+                        scrollLock: true
+                    }
+                }
+            ]
+        });
+        //Hide scroll bar on Firefox
+        document.addEventListener('glider-loaded', hideFFScrollBars);
+        document.addEventListener('glider-refresh', hideFFScrollBars);
+        function hideFFScrollBars(e){
+          var scrollbarHeight = 1; // Currently 17, may change with updates
+          if(/firefox/i.test(navigator.userAgent)){
+            // Only applied to desktop. Firefox for mobile uses Webkit
+            if (window.innerWidth > 575){
+              e.target.parentNode.style.height = (e.target.offsetHeight - scrollbarHeight) + 'px'
+            }
+          }
+        }
+
+      });
+
+
+
+    </script>
+    <!-- END CONTENT SLIDER -->
+
+
 
   <!-- Service Worker start -->
   <script type="text/javascript">
