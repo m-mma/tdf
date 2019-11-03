@@ -120,11 +120,12 @@
 
             <div class="col-12">
               <h1 class="headline">Make Your Data Work For Your Business</h1>
-              <h2 class="sub-headline">We Help Collect & Analyze Your Data To Create Value For Your Business</h2>
+              <h2 class="sub-headline" >We Help Collect & Analyze Your Data To Create Value For Your Business</h2>
               <div class="col-6 image-wrap">
                 <img src="images\static\introduction-graphic.svg" alt="About Us Graphic">
               </div>
-              <div class="col-6 content" id="about-us">
+
+              <div class="col-6 content" id="about-us" >
                 <h2 class="section-title">About Us</h2>
                 <p>We believe that every business has data which when collected, stored, cleaned, organized, consolidated, analyzed and interpreted by a trained mind yields valuable insights into the business which helps in making strategic business planning decisions & operations efficiency improvements.</p>
                 <p>Our commitment is to providing services that precisely cater to our clients through harnessing the expertise of our in-house analysts. We collect market data, organize it and make it quickly accessible with an aim of providing authoritative value for our clients’ businesses in line with their market needs. </p>
@@ -145,11 +146,13 @@
       <!-- SERVICES SECTION START -->
       <section id="what-we-do" class="services">
 
+
         <div class="wrapper">
-          <div class="row">
+
+          <div class="row" id="particles-js">
             <div class="col-12">
-              <h2  class="section-title">What We Do</h2>
-              <p class="content--center">We support the entire data management cycle in our clients’ business from collection to dissemination. By integrating data patterns with the latest technology, we are able to understand our client’s customer needs and provide them with  recommendations for short and long term business improvements.</p>
+              <h2 class="section-title">What We Do</h2>
+              <p class="content--center ">We support the entire data management cycle in our clients’ business from collection to dissemination. By integrating data patterns with the latest technology, we are able to understand our client’s customer needs and provide them with  recommendations for short and long term business improvements.</p>
               <br>
               <br>
               <div class="col-4">
@@ -292,12 +295,12 @@
       <!-- END SERVICES SECTION -->
 
       <!-- PROJECTS SECTION START -->
-      <section class="projects" >
+      <section class="projects" id="projects" >
 
         <div class="wrapper">
           <div class="row">
             <div class="col-12">
-              <h2 id="projects" class="section-title">Projects</h2>
+              <h2  class="section-title">Projects</h2>
               <div class="glider-wrap">
                 <div class="glider-contain">
                   <div class="glider">
@@ -378,12 +381,12 @@
       </section>
       <!-- END PROJECTS SECTION -->
 
-      <section class="contacts" >
+      <section class="contacts" id="contacts-us">
         <div class="wrapper">
           <div class="row">
             <div class="col-12">
               <div class="col-6 content">
-                <h2 class="section-title" id="contacts-us">Contact Us</h2>
+                <h2 class="section-title">Contact Us</h2>
 
                 <div class="contacts">
                   <p>Let us help you leverage your organization’s data to help you make better decisions and cut down on time and operation costs. You can reach us at:</p>
@@ -577,24 +580,31 @@
             ]
         });
         //Hide scroll bar on Firefox
-        document.addEventListener('glider-loaded', hideFFScrollBars);
-        document.addEventListener('glider-refresh', hideFFScrollBars);
-        function hideFFScrollBars(e){
-          var scrollbarHeight = 1; // Currently 17, may change with updates
-          if(/firefox/i.test(navigator.userAgent)){
-            // Only applied to desktop. Firefox for mobile uses Webkit
-            if (window.innerWidth > 575){
-              e.target.parentNode.style.height = (e.target.offsetHeight - scrollbarHeight) + 'px'
-            }
-          }
-        }
+        // document.addEventListener('glider-loaded', hideFFScrollBars);
+        // document.addEventListener('glider-refresh', hideFFScrollBars);
+        // function hideFFScrollBars(e){
+        //   var scrollbarHeight = 1; // Currently 17, may change with updates
+        //   if(/firefox/i.test(navigator.userAgent)){
+        //     // Only applied to desktop. Firefox for mobile uses Webkit
+        //     if (window.innerWidth > 575){
+        //       e.target.parentNode.style.height = (e.target.offsetHeight - scrollbarHeight) + 'px'
+        //     }
+        //   }
+        // }
 
       });
-
-
-
     </script>
     <!-- END CONTENT SLIDER -->
+
+    <!-- BACKGROUND PARTICLE EFFECT START -->
+
+
+    <script>
+      particlesJS.load('particles-js', 'particlesjs-config-1.json', function() {
+        console.log('particles.js loaded - callback');
+      });
+    </script>
+    <!-- END BACKGROUND PARTICLE EFFECT -->
 
 
 

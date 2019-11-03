@@ -10,9 +10,9 @@ Staging area for The Data Factory Website
 ## Gulp Tasks
 Running `gulp` watches for changes to the .html, .scss, .js and image files in the 'src' folder and compiles them into the root folder.
 
-*  `css-tasks` compiles the .scss into CSS and minifies it into the dist/css folder.
-*  `js-scripts` concatenates all the .js files in the js folder and minifies them into the dist/js folder.
-*  `html-minify` listens to .html changes in the src folder and minifies the file into the dist folder.
-*  `image-minify` watches for changes to PNG, JPEG, GIF and SVG images and compresses them into the dist/images folder.
+*  `css-tasks` compiles the .scss into CSS and minifies it into the css folder.
+*  `js-scripts` concatenates all the .js files in the js folder and minifies them into the js folder.
+*  `html-minify` listens to .html changes in the src folder and minifies the file into the root folder.
+*  `image-minify` watches for changes to PNG, JPEG, GIF and SVG images and compresses them into the images folder.
 *  `inlinesource` adds inline code to script, link and image tags that contain the 'inline' attribute .
 *  `generate-sw` generates a service worker and precaches static resources such as logos, images and embedded fonts.

@@ -84,6 +84,7 @@
   background-color: $purple;
   text-align: center;
   width: 100%;
+  z-index: 1;
   h1, h2 {
     text-align: center;
   }
@@ -136,7 +137,7 @@
     color: $white;
     text-decoration: underline;
     &:hover {
-      color: $white;
+      color: lighten($orange, 25%);
       text-decoration: none;
     }
     &:active {
@@ -156,8 +157,7 @@
     padding-bottom: 0;
     padding-left: 0;
   }
-
-  @media #{$mobile} {
+  @media #{$mid-mobile} {
     .content {
       padding-right: 0;
     }
@@ -170,6 +170,20 @@
       }
     }
   }
+
+  // @media #{$mobile} {
+  //   .content {
+  //     padding-right: 0;
+  //   }
+  //   .phone-numbers {
+  //     a {
+  //       &:last-of-type {
+  //         display: block;
+  //         margin-left: 30px;
+  //       }
+  //     }
+  //   }
+  // }
 }
 
 @media #{$tablet} {
@@ -185,20 +199,11 @@
     padding-top: 0;
     padding-right: 0;
     padding-left: 0;
-    .contacts {
-      .phone-numbers {
-        a {
-          &:last-of-type {
-            display: block;
-            margin-left: 30px;
-          }
-        }
-      }
-    }
-  }
-}
-@media #{$mobile} {
-  .contacts {
 
   }
 }
+// @media #{$mobile} {
+//   .contacts {
+//
+//   }
+// }
