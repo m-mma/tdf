@@ -50,3 +50,12 @@
 	// 	margin-top: 200px;
 	// }
 }
+.parallaxParent {
+		// height: 100vh;
+		overflow: hidden;
+	}
+	.parallaxParent > * {
+		height: 200%;
+		position: relative;
+		top: -100%;
+	}

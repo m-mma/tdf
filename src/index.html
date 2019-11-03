@@ -296,13 +296,13 @@
       <!-- END SERVICES SECTION -->
 
       <!-- PROJECTS SECTION START -->
-      <section class="projects" id="projects" >
+      <section class="projects " id="projects" >
 
-        <div class="wrapper">
+        <div class="wrapper ">
           <div class="row">
-            <div class="col-12 digit">
+            <div class="col-12">
               <h2  class="section-title">Projects</h2>
-              <div class="glider-wrap">
+              <div class="glider-wrap digit">
                 <div class="glider-contain">
                   <div class="glider">
                     <div>
@@ -487,6 +487,7 @@
 
 
   <!-- SMOOTH SCROLL START -->
+  <!-- Documentation: http://github.com/cferdinandi/smooth-scroll -->
   <script type="text/javascript">
     var scroll = new SmoothScroll('a[href*="#"]:not([data-easing])');
      if (document.querySelector('[data-easing]')) {
@@ -502,8 +503,8 @@
   <!-- END STICKY NAV -->
 
   <!-- CONTENT SLIDER START -->
+  <!-- Documentation: http://nickpiscitelli.github.io/Glider.js -->
   <script type="text/javascript">
-    // Documentation: http://nickpiscitelli.github.io/Glider.js
 
       window.addEventListener('load',function(){
         document.querySelector('.glider').addEventListener('glider-slide-visible', function(event){
@@ -621,12 +622,9 @@
                  triggerHook: 0.9,
                })
                .setClassToggle(revealElements[i], "visible") // add class toggle
-               // .addIndicators({name: "digit " + (i+1) }) // add indicators (requires plugin)
                .addTo(controller);
      }
-
     </script>
-
     <!-- END SCROLL MAGIC -->
 
 
