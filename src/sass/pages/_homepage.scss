@@ -126,7 +126,7 @@
   width: 100%;
   background: $red;
   background-color: $red;
-
+  z-index: 1;
   h1, h2 {
     color: $white;
   }
@@ -156,6 +156,12 @@
     padding-right: 2em;
     padding-bottom: 0;
     padding-left: 0;
+    z-index: 2;
+  }
+  .image-wrap {
+    img {
+      z-index: 2;
+    }
   }
   @media #{$mid-mobile} {
     .content {

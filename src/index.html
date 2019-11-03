@@ -149,13 +149,14 @@
 
         <div class="wrapper">
 
-          <div class="row" id="particles-js">
+          <div class="row" id="particles-js-1">
             <div class="col-12">
               <h2 class="section-title">What We Do</h2>
-              <p class="content--center ">We support the entire data management cycle in our clients’ business from collection to dissemination. By integrating data patterns with the latest technology, we are able to understand our client’s customer needs and provide them with  recommendations for short and long term business improvements.</p>
+              <p class="content--center">We support the entire data management cycle in our clients’ business from collection to dissemination. By integrating data patterns with the latest technology, we are able to understand our client’s customer needs and provide them with  recommendations for short and long term business improvements.</p>
               <br>
               <br>
-              <div class="col-4">
+
+              <div class="col-4 digit">
 
                 <svg version="1.1" id="understand-icon" class="icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
                 	 y="0px" viewBox="0 0 340 200" xml:space="preserve" alt="Customer Icon">
@@ -205,7 +206,7 @@
                 <h4>Understand Your Customers Better</h4>
                 <p>Your market data will let you understand your customer’s habits and help you provide them with the products and services they want.</p>
               </div>
-              <div class="col-4">
+              <div class="col-4 digit">
 
                 <svg version="1.1" id="decision-icon" class="icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
                 	 y="0px" viewBox="0 0 340 200" xml:space="preserve" alt="Decision Icon">
@@ -246,7 +247,7 @@
                 <h4>Improved Decision Making</h4>
                 <p>Consumer patterns can be measured and tracked to provide insights on a marketing approach that works best for your customers.</p>
               </div>
-              <div class="col-4">
+              <div class="col-4 digit">
                 <svg version="1.1" id="costs-icon" class="icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                 	 viewBox="0 0 340 200" xml:space="preserve" alt="Costs Icon">
 
@@ -299,7 +300,7 @@
 
         <div class="wrapper">
           <div class="row">
-            <div class="col-12">
+            <div class="col-12 digit">
               <h2  class="section-title">Projects</h2>
               <div class="glider-wrap">
                 <div class="glider-contain">
@@ -383,12 +384,12 @@
 
       <section class="contacts" id="contacts-us">
         <div class="wrapper">
-          <div class="row">
+          <div class="row" >
             <div class="col-12">
               <div class="col-6 content">
-                <h2 class="section-title">Contact Us</h2>
+                <h2 class="section-title digit">Contact Us</h2>
 
-                <div class="contacts">
+                <div class="contacts digit">
                   <p>Let us help you leverage your organization’s data to help you make better decisions and cut down on time and operation costs. You can reach us at:</p>
                   <p class="phone-numbers">
                     <svg version="1.1" id="phone" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 21 21" style="enable-background:new 0 0 21 21;" xml:space="preserve" alt="Phone Icon">
@@ -441,7 +442,7 @@
 
               </div>
 
-              <div class="col-6 image-wrap">
+              <div class="col-6 image-wrap digit">
                 <img src="images\static\contacts-graphic.svg" alt="Contact Us Graphic">
               </div>
 
@@ -501,7 +502,8 @@
   <!-- END STICKY NAV -->
 
   <!-- CONTENT SLIDER START -->
-  <script>
+  <script type="text/javascript">
+    // Documentation: http://nickpiscitelli.github.io/Glider.js
 
       window.addEventListener('load',function(){
         document.querySelector('.glider').addEventListener('glider-slide-visible', function(event){
@@ -597,14 +599,35 @@
     <!-- END CONTENT SLIDER -->
 
     <!-- BACKGROUND PARTICLE EFFECT START -->
-
-
-    <script>
-      particlesJS.load('particles-js', 'particlesjs-config-1.json', function() {
+    <!-- Documentation: https://github.com/VincentGarreau/particles.js/ -->
+    <script type="text/javascript">
+      particlesJS.load('particles-js-1', 'particlesjs-config-1.json', function() {
         console.log('particles.js loaded - callback');
       });
     </script>
     <!-- END BACKGROUND PARTICLE EFFECT -->
+
+    <!-- SCROLL MAGIC START -->
+    <!-- Documentation: https://github.com/janpaepke/ScrollMagic -->
+    <script type="text/javascript">
+    // init controller
+	   var controller = new ScrollMagic.Controller();
+     // build scenes
+     var revealElements = document.getElementsByClassName("digit");
+     for (var i=0; i<revealElements.length; i++) { // create a scene for each element
+       new ScrollMagic.Scene({
+                 triggerElement: revealElements[i], // y value not modified, so we can use element as trigger as well
+                 offset: 50,												 // start a little later
+                 triggerHook: 0.9,
+               })
+               .setClassToggle(revealElements[i], "visible") // add class toggle
+               // .addIndicators({name: "digit " + (i+1) }) // add indicators (requires plugin)
+               .addTo(controller);
+     }
+
+    </script>
+
+    <!-- END SCROLL MAGIC -->
 
 
 

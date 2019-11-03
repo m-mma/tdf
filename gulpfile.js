@@ -47,7 +47,7 @@ gulp.task('css-tasks', done => {
 
 // Start JS tasks
 gulp.task('js-scripts', done => {
-  gulp.src('src/js/*.js')
+  gulp.src('src/js/**/*.js')
     .pipe(concat('all-js-min.js'))
     .pipe(terser())
     .pipe(gulp.dest('js/'))
@@ -58,7 +58,6 @@ gulp.task('js-scripts', done => {
 
 //Start inline CSS and JS
 gulp.task('inlinesource', done => {
-
   return gulp.src('src/**/*.html')
     .pipe(inlinesource())
     .pipe(gulp.dest('./'));
