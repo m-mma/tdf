@@ -471,8 +471,8 @@
           </div>
 
           <nav class="col-6 footer__nav">
-            <a href="#">Terms &amp; Conditions</a>
-            <a href="#">Privacy Policy</a>
+            <a href="terms-and-privacy.html">Terms &amp; Conditions</a>
+            <a href="terms-and-privacy.html#privacy">Privacy Policy</a>
           </nav>
 
         </div>
@@ -489,7 +489,10 @@
   <!-- SMOOTH SCROLL START -->
   <!-- Documentation: http://github.com/cferdinandi/smooth-scroll -->
   <script type="text/javascript">
-    var scroll = new SmoothScroll('a[href*="#"]:not([data-easing])');
+    // var scroll = new SmoothScroll('a[href*="#"]:not([data-easing])');
+    var scroll = new SmoothScroll('a[href*="#"]', {
+    	offset: 25
+    });
      if (document.querySelector('[data-easing]')) {
        var easeOutQuad = new SmoothScroll('[data-easing="easeOutQuad"]', {easing: 'easeOutQuad'});
      }
@@ -498,7 +501,7 @@
 
   <!-- STICKY NAV START -->
   <script type="text/javascript">
-    window.onscroll = function() {stickyNav()};
+    window.onscroll = function(event) {stickyNav()};
   </script>
   <!-- END STICKY NAV -->
 
