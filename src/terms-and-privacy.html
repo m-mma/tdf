@@ -27,8 +27,13 @@
   <!-- <meta name="robots" content="index, follow"> -->
   <!-- End live -->
 
-  <link href="css/main-styles.css" rel="stylesheet" type="text/css">
-  <!-- <link inline href="../css/main-styles.css" rel="stylesheet" type="text/css"> -->
+  <!-- Development CSS File Start -->
+  <!-- <link href="css/main-styles.css" rel="stylesheet" type="text/css"> -->
+  <!-- End Development CSS File -->
+
+  <!-- Inline CSS File Start -->
+  <link inline href="../css/main-styles.css" rel="stylesheet" type="text/css">
+  <!-- End Inline CSS File  -->
 
   <!--  Google Analytics Start-->
 
@@ -310,14 +315,20 @@
   </footer>
   <!-- END FOOTER -->
 
-  <script type="text/javascript" src="js/all-js-min.js"></script>
+  <!-- Development Site JS File Start -->
+  <!-- <script type="text/javascript" src="js/all-js-min.js"></script> -->
+  <!-- Development Site JS File End -->
+
+  <!-- Live Site JS File Start -->
+  <script type="text/javascript" src="../js/all-js-min.js" inline></script>
+  <!-- Live Site File End -->
 
 
   <!-- SMOOTH SCROLL START -->
   <!-- Documentation: http://github.com/cferdinandi/smooth-scroll -->
   <script type="text/javascript">
     var scroll = new SmoothScroll('a[href*="#"]', {
-    	offset: 55
+    	offset: 60
     });
      if (document.querySelector('[data-easing]')) {
        var easeOutQuad = new SmoothScroll('[data-easing="easeOutQuad"]', {easing: 'easeOutQuad'});
