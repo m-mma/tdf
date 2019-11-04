@@ -8,7 +8,7 @@ var sourcemaps = require('gulp-sourcemaps');
 var autoprefixer = require('gulp-autoprefixer');
 var terser = require('gulp-terser');
 var concat = require('gulp-concat');
-var htmlmin = require('gulp-htmlmin');
+// var htmlmin = require('gulp-htmlmin');
 var inlinesource = require('gulp-inline-source');
 var imagemin = require('gulp-imagemin');
 var swPrecache = require('sw-precache');
@@ -67,18 +67,18 @@ gulp.task('inlinesource', done => {
 
 
 // Start HTML minify task
-gulp.task('html-minify', done => {
-  return gulp.src(['src/**/*.html'])
-    .pipe(htmlmin({
-      collapseWhitespace: true,
-      removeComments: true,
-      // removeEmptyElements: true,
-      minifyCSS: false,
-      minifyJS: false
-    }))
-    .pipe(gulp.dest('./'));
-  done();
-});
+// gulp.task('html-minify', done => {
+//   return gulp.src(['src/**/*.html'])
+//     .pipe(htmlmin({
+//       collapseWhitespace: true,
+//       removeComments: true,
+//       // removeEmptyElements: true,
+//       minifyCSS: true,
+//       minifyJS: true
+//     }))
+//     .pipe(gulp.dest('./'));
+//   done();
+// });
 // end HTML minify task
 
 
