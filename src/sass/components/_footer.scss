@@ -1,6 +1,6 @@
 footer {
   background-color: $white;
-  padding-top: 0;
+  padding-top: $paragraph-size;
   font-size: 14px;
   line-height: 1.3;
   .footer__copyright, .footer__copyright--home {
@@ -32,6 +32,7 @@ footer {
     .footer__copyright--home {
       text-align: center;
       display: block;
+      padding-top: 0;
     }
     .footer__nav {
       text-align: center;
