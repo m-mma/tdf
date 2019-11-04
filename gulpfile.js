@@ -109,7 +109,7 @@ gulp.task('generate-sw', function(callback) {
   swPrecache.write(`service-worker.js`, {
     // staticFileGlobs: [rootDir + '/*.{js,html,css,png,jpg,gif,svg,eot,ttf,woff}'],
     staticFileGlobs: [
-      // './**.html',
+      './**.html',
       // 'css/main-styles.css',
       'fonts/**.*',
       'images/static/**.*'
