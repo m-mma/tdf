@@ -14,4 +14,4 @@ Running `gulp` watches for changes to the .html, .scss, .js and image files in t
 *  `js-scripts` concatenates all the .js files in the js folder and minifies them into the js folder.
 *  `image-minify` watches for changes to PNG, JPEG, GIF and SVG images and compresses them into the images folder.
 *  `inlinesource` adds inline code to script, link and image tags that contain the 'inline' attribute .
-*  `generate-sw` generates a service worker and precaches static resources such as logos, images and embedded fonts.
+*  `service-worker` generates a service worker and precaches static resources such as logos, images and embedded fonts.

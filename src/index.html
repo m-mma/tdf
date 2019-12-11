@@ -637,21 +637,18 @@
     </script>
     <!-- END SCROLL MAGIC -->
 
-
-
-  <!-- Service Worker start -->
-  <script type="text/javascript">
-    if ('serviceWorker' in navigator) {
-      console.log("Register service worker");
-      navigator.serviceWorker.register('service-worker.js').then(function(reg) {
-        console.log("service worker registered successfully");
-      }).catch(function(err) {
-        console.log("service worker failed ", err)
-      });
-    }
-  </script>
-  <!-- End Service Worker -->
-
+    <!-- Service Worker start -->
+    <script type="text/javascript">
+      // Check that service workers are supported
+      if ('serviceWorker' in navigator) {
+        // Use the window load event to keep the page load performant
+        window.addEventListener('load', () => {
+          navigator.serviceWorker.register('./sw.js');
+          console.log("service worker registered successfully");
+        });
+      }
+    </script>
+    <!-- End Service Worker -->
 </body>
 
 </html>

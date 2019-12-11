@@ -8,10 +8,9 @@ var sourcemaps = require('gulp-sourcemaps');
 var autoprefixer = require('gulp-autoprefixer');
 var terser = require('gulp-terser');
 var concat = require('gulp-concat');
-// var htmlmin = require('gulp-htmlmin');
 var inlinesource = require('gulp-inline-source');
 var imagemin = require('gulp-imagemin');
-var swPrecache = require('sw-precache');
+var workboxBuild = require('workbox-build');
 
 
 //Watch for 'Ctrl + C' on Windows and end gulp process
@@ -66,21 +65,6 @@ gulp.task('inlinesource', done => {
 //End inline CSS and JS
 
 
-// Start HTML minify task
-// gulp.task('html-minify', done => {
-//   return gulp.src(['src/**/*.html'])
-//     .pipe(htmlmin({
-//       collapseWhitespace: true,
-//       removeComments: true,
-//       // removeEmptyElements: true,
-//       minifyCSS: true,
-//       minifyJS: true
-//     }))
-//     .pipe(gulp.dest('./'));
-//   done();
-// });
-// end HTML minify task
-
 
 // Start image minify task
 gulp.task('image-minify', () =>
@@ -101,26 +85,15 @@ gulp.task('image-minify', () =>
 // End  image minify task
 
 // Start service worker precache
-gulp.task('generate-sw', function(callback) {
-  var path = require('path');
-  // var swPrecache = require('sw-precache');
-  var rootDir = './';
-
-  swPrecache.write(`service-worker.js`, {
-    // staticFileGlobs: [rootDir + '/*.{js,html,css,png,jpg,gif,svg,eot,ttf,woff}'],
-    staticFileGlobs: [
-      // './**.html',
-      // 'css/main-styles.css',
-      'fonts/**.*',
-      'images/static/**.*',
-      'images/slides/**.*'
+gulp.task('service-worker', () => {
+  return workboxBuild.generateSW({
+    globDirectory: './',
+    globPatterns: [
+      '**/*.{html,json,js,css,jpg,svg,eot,ttf,woff,woff2}',
     ],
-    // stripPrefix: rootDir
-
-  }, callback);
-
+    swDest: './sw.js',
+  });
 });
-
 // End service worker precache
 
 // Start watch task
@@ -129,7 +102,5 @@ gulp.task('default', done => {
   gulp.watch('src/sass/**/*.scss', gulp.series('css-tasks'));
   gulp.watch('src/images/**/*.*', gulp.series('image-minify'));
   gulp.watch('src/*.html', gulp.series('inlinesource'));
-  // gulp.watch('src/*.html', gulp.series('html-minify'));
-  // gulp.watch( 'dist', gulp.series('generate-sw'));
   done();
 });
